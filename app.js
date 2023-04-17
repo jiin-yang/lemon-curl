@@ -49,6 +49,26 @@ app.get('/api/csharp', (req, res) => {
     }
 })
 
+app.get('/api/dart', (req, res) => {
+
+    try {
+        let response = curlConverter.toDart(req.body.curl);
+        res.send(response);
+    }catch (e) {
+        res.status(400).send(e.message);
+    }
+})
+
+app.get('/api/php', (req, res) => {
+
+    try {
+        let response = curlConverter.toPhp(req.body.curl);
+        res.send(response);
+    }catch (e) {
+        res.status(400).send(e.message);
+    }
+})
+
 app.listen(port, () => {
     console.log(`Lemon-curl app listening on port ${port}`)
 })
