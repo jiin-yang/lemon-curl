@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/jiin-yang/lemon-curl#readme",
   "dependencies": {
-    "curlconverter": "^4.6.0",
+    "curlconverter": "^4.9.0",
     "express": "^4.18.2"
   }
 }
